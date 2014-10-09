@@ -1,0 +1,94 @@
+@import compass
+// @import susy
+
+@import foundation/config
+@import foundation/base
+// @import foundation/helpers
+// @import foundation/tools
+body, html
+  height: inherit
++keyframes(kerning)
+  0%
+    letter-spacing: 13px
+    +transform(translateY(0px))
+    text-shadow: 0 0 15px rgba(255,255,255,0.6)
+  25%
+    +transform(translateY(30px))
+  40%
+    letter-spacing: 17px
+  50%
+    +transform(translateY(15px))
+  60%
+    letter-spacing: 14px
+  100%
+    letter-spacing: 20px
+    +transform(translateY(40px))
+    text-shadow: 0 0 5px rgba(255,255,255,0.8)
+
++keyframes(animationA)
+  0%
+    letter-spacing: 1px
+    +transform(translateY(0px))
+    // padding-left: 10px
+  100%
+    letter-spacing: 50px
+    +transform(translateY(10px))
+    // padding-left: 0px
+.text
+  text-align: center
+  font-size: 3em
+  font-weight: 100
+  // text-shadow: 0 0 10px rgba(255,255,255,0.5)
+  color: transparent
+  margin-top: 28%
+  letter-spacing: 13px
+  -webkit-animation: kerning 10s /* Chrome, Safari, Opera */
+  animation: kerning 10s
+  -webkit-animation-direction: alternate-reverse   
+  animation-direction: alternate-reverse
+  -webkit-animation-iteration-count: infinite /* Chrome, Safari, Opera */
+  animation-iteration-count: infinite
+  +transition(.5s)
+  // &:hover
+    // letter-spacing: .3em
+  // +transform(translateY(300px))
+// .kerning
+//   text-rendering: optimizeLegibility
+//   font-feature-settings: "kern"
+//   -webkit-font-feature-settings: "kern"
+//   -moz-font-feature-settings: "kern"
+//   -moz-font-feature-settings: "kern=1"
+.a
+  -webkit-animation: animationA 15s /* Chrome, Safari, Opera */
+  animation: animationA 15s
+  -webkit-animation-direction: alternate-reverse   
+  animation-direction: alternate-reverse
+  -webkit-animation-iteration-count: infinite /* Chrome, Safari, Opera */
+  animation-iteration-count: infinite
+.u
+  -webkit-animation: animationA 13s /* Chrome, Safari, Opera */
+  animation: animationA 13s
+  -webkit-animation-direction: alternate-reverse   
+  animation-direction: alternate-reverse
+  -webkit-animation-iteration-count: infinite /* Chrome, Safari, Opera */
+  animation-iteration-count: infinite
+.n
+  -webkit-animation: animationA 11s /* Chrome, Safari, Opera */
+  animation: animationA 11s
+  -webkit-animation-direction: alternate-reverse   
+  animation-direction: alternate-reverse
+  -webkit-animation-iteration-count: infinite /* Chrome, Safari, Opera */
+  animation-iteration-count: infinite
+.point
+  -webkit-animation: animationA 6s /* Chrome, Safari, Opera */
+  animation: animationA 6s
+  -webkit-animation-direction: alternate-reverse   
+  animation-direction: alternate-reverse
+  -webkit-animation-iteration-count: infinite /* Chrome, Safari, Opera */
+  animation-iteration-count: infinite
+.bg
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  opacity: 0.4
